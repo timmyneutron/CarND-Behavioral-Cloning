@@ -73,4 +73,4 @@ I noted that the failure mode for the car on the track was always underturning (
 
 Once the car would stay on the track, I added some "correction" data - moving the car off the center line and then recording the car gently returning to the center line. This helped smooth out some of the noise in the steering, and correct for when the car was off center.
 
-I then tested the model on the second track, and found that it worked fairly well.
+I then tested the model on the second track, and found that it worked fairly well - it was able to follow the curves in the second track about as well as it did the first.

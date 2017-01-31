@@ -18,12 +18,16 @@ Concepts explored in this project:
   - Anti-overfitting techniques like dropout and L2 regularization
   - Training neural networks using a GPU on Amazon Web Services
   
-## Project Description
+## Model Description
 
 ### Image preprocessing
+  - Since the information needed to steer the car is found in the lower portion of the forward-facing images, the top 50 pixels of the images were cropped.
+  - Images were resized by a scale factor of .5, which maintained accuaracy while speeding up training
 
 ### Data augmentation
-
-### Building the model
-
+  - Data was augmented by copying images of "turns" (ie, where the steering angle was not equal to 0), flipping these copies horizontally, and negating the steering angle.
+  
+### Model Architecture
+#### The architecture of the model is as follows:
+  - floop di doop
 ### Training the model

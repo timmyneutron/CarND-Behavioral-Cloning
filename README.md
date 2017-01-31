@@ -51,4 +51,4 @@ Concepts explored in this project:
 ### Behavioral Cloning
   - The sample data provided was a good starting off point, but more data was needed to ensure the car could get around the whole track. This was especially true for tight turns.
   - The most efficient way to train the car to stay on track was to "bounce" it off the edges of the track - meaning, to steer toward the edge (while not recording), and then record the car sharply turning away from the edge.
-   - Some other problem areas were addressed by moving the car off the center line of the track (while not recording), and then record gently returning to the center line
+  - Some other problem areas were addressed by moving the car off the center line of the track (while not recording), and then record gently returning to the center line

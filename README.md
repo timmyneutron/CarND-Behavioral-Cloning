@@ -1,5 +1,5 @@
-# Udacity Self-Driving Car Nanodegree
 ![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)
+# Udacity Self-Driving Car Nanodegree
 # Project #3: Behavioral Cloning (Steering Angle)
 
 ## Introduction

@@ -1,1 +1,7 @@
 IMG/
+
+*.sh
+
+*.app
+
+*.numbers

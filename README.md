@@ -18,12 +18,12 @@ Concepts explored in this project:
   - Anti-overfitting techniques like dropout and L2 regularization
   - Training neural networks using a GPU on Amazon Web Services
   
-## Project Description
+### Project Description
 
-# Image preprocessing
+### Image preprocessing
 
-# Data augmentation
+### Data augmentation
 
-# Building the model
+### Building the model
 
-# Training the model
+### Training the model

@@ -53,7 +53,7 @@ Concepts explored in this project:
   - The most efficient way to train the car to stay on track was to "bounce" it off the edges of the track - meaning, to steer toward the edge (while not recording), and then record the car sharply turning away from the edge.
   - Some other problem areas were addressed by moving the car off the center line of the track (while not recording), and then record gently returning to the center line
 
-### Solution Explanation
+## Solution Explanation
 
 There were many mis-starts to this project, as many ideas that seemed worth pursuing in theory turned out to not be worthwhile in practice. My first idea was to use feature extraction with one of the ImageNet architectures like ResNet or InceptionV3 (both of which come prepackaged with Keras). But they proved too large and unwieldy for the task at hand - training them took too much time and used too much memory.
 

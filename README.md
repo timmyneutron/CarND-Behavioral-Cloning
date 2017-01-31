@@ -30,5 +30,25 @@ Concepts explored in this project:
   
 ### Model Architecture
 #### The architecture of the model is as follows:
-  - 2D convolutional layer: 6x6 
-### Training the model
+  - 2D convolutional layer: 6x6 filter with 16 features, "same" borders, and ReLU activation
+  - 3x3 average pooling layer
+  - 2D convolutional layer: 6x6 filter with 16 features, "same" borders, and ReLU activation
+  - 2x2 average pooling layer
+  - 2D convolutional layer: 6x6 filter with 16 features, "same" borders, and ReLU activation
+  - 2x2 average pooling layer
+  - Flatten layer
+  - Dropout layer (50%)
+  - Fully connected layer: 1024 features with ReLU activation
+  - Dropout layer (50%)
+  - Fully connected layer: 1 feature with tanh activation
+  
+#### Training the model
+  - The model uses as Adam optimizer with a learning rate of 1e-4
+  - The model uses Mean Squared Error as its loss function
+  - 20% of the data was used in the validation set
+  - The model was trained for 5 epochs
+  
+### Behavioral Cloning
+  - The sample data provided was a good starting off point, but more data was needed to ensure the car could get around the whole track. This was especially true for tight turns.
+  - The most efficient way to train the car to stay on track was to "bounce" it off the edges of the track - meaning, to steer toward the edge (while not recording), and then record the car sharply turning away from the edge.
+   - Some other problem areas were addressed by moving the car off the center line of the track (while not recording), and then record gently returning to the center line

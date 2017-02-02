@@ -42,6 +42,8 @@ Concepts explored in this project:
   - Dropout layer (50%)
   - Fully connected layer: 1 feature with tanh activation
   
+![Model](https://raw.githubusercontent.com/timmyneutron/self_driving_car_P3_steering_angle/master/model.png)
+  
 #### Training the model
   - The model uses as Adam optimizer with a learning rate of 1e-4
   - The model uses Mean Squared Error as its loss function

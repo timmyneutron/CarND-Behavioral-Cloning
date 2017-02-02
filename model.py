@@ -8,6 +8,7 @@ from preprocess import preprocess, get_preprocess_dict
 from sklearn.model_selection import train_test_split
 from load import load_data
 import pickle
+from keras.utils.visualize_util import plot
 
 ### load data
 
@@ -78,7 +79,7 @@ adam = Adam(lr=1e-4)
 
 model.compile(optimizer=adam, loss="mse")
 
-### train model
+# ### train model
 
 nb_validation_samples = len(X_validation)
 
@@ -96,3 +97,5 @@ with open("model.json", "w") as json_file:
 	json_file.write(json_string)
 
 model.save_weights('model.h5')
+
+plot(model, to_file="model.png")

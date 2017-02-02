@@ -24,6 +24,8 @@ Concepts explored in this project:
   - Since the information needed to steer the car is found in the lower portion of the forward-facing images, the top 50 pixels of the images were cropped.
   - Images were resized by a scale factor of .5, which maintained accuaracy while speeding up training
   - RGB channels were normalized to a range of -1 to 1
+  
+  (https://raw.githubusercontent.com/timmyneutron/self_driving_car_P3_steering_angle/master/hist.png)
 
 ### Data augmentation
   - Data was augmented by copying images of "turns" (ie, where the steering angle was not equal to 0), flipping these copies horizontally, and negating the steering angle.

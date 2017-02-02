@@ -34,11 +34,11 @@ def load_data(driving_log, num_images=None, augment=True):
 	return features, labels
 
 if __name__ == "__main__":
-	X_train, y_train = load_data("driving_log.csv")
+	X_train, y_train = load_data("driving_log.csv", augment=False)
 	
 	print("X_train shape: {}".format(X_train.shape))
 	print("y_train shape: {}".format(y_train.shape))
 
-	plt.hist(np.absolute(y_train), bins=100, range=(0, 1.0), fc='k', ec='k')
-
-	plt.show()
+	plt.hist(y_train, bins=50)
+	plt.title("Steering Angle Histogram")
+	plt.savefig("hist.png")

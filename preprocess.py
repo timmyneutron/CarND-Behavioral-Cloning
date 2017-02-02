@@ -206,13 +206,14 @@ if __name__ == "__main__":
 	'''Plots sample images with specified preprocessing'''
 	num_images = 4
 
-	X_test, y_test = load_data("test_driving_log.csv", num_images=num_images)
+	X_test, y_test = load_data("driving_log.csv", num_images=num_images)
 
 	preprocess_dict = get_preprocess_dict()
 	X_test_preprocessed = preprocess(X_test, preprocess_dict)
 
-	fig = plt.figure(figsize=(30, 10))
-
+	fig = plt.figure(figsize=(20, 5))
+	plt.title("Original and Processed Images")
+	plt.axis("off")
 	X_test_preprocessed = np.squeeze(X_test_preprocessed)
 
 	for i in range(0, 4):
@@ -222,5 +223,7 @@ if __name__ == "__main__":
 		plt.imshow(X_test_preprocessed[i])
 
 
-	plt.show()
+	plt.savefig("processed_images.png", bbox_inches='tight', format="png")
+
+	# plt.show()
 

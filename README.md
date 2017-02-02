@@ -60,9 +60,7 @@ There were many mis-starts to this project, as many ideas that seemed worth purs
 There were also plenty of false starts with image preprocessing - I tried techniques like cropping, scaling, applying a Gaussian blur, Laplacian gradient, or Canny transform, converting to YUV, and region masking. I even tried doing a 3-channel Canny transform, where I did individual Canny transforms on each color channel and then combined them back into one (very pretty) image. However, most of these ideas didn't result in better performance, and were scrapped.
 
 I eventually fell back on cropping off the top 50 pixels of each image (taking out unimportant noise above the road), and scaling images to a factor of 0.5 (which speed up training while maintaining accuracy). I also normalized the all the channel data to a range of -1 to 1.
-
-<img src="https://raw.githubusercontent.com/timmyneutron/self_driving_car_P3_steering_angle/master/processed_images.png" alt="Original and Processed Images" style="width: 100%">
-
+[![Original and Processed Images](https://raw.githubusercontent.com/timmyneutron/self_driving_car_P3_steering_angle/master/processed_images.png)]
 
 I also augmented the data by copying all of the "turn" images (images where the steering angle was not equal to 0), flipping the copies horizontally, and negating their steering angles. The rationale behind this was that any turn in one direction should correspond to a turn in the other direction that was equal in magnitude and opposite in direction.
 

@@ -74,7 +74,7 @@ I then tried to systematically increase the size of the model, and modify its hy
 
 I noted that the failure mode for the car on the track was always underturning (ie, not turning enough) rather than overturning (turning too much). This made sense given the distribution of the training data - roughly half of the training labels are 0, and very few were high in magnitude.
 
-[!(https://raw.githubusercontent.com/timmyneutron/self_driving_car_P3_steering_angle/master/hist.png)]
+[![Steering Angle Histogram](https://raw.githubusercontent.com/timmyneutron/self_driving_car_P3_steering_angle/master/hist.png)]
 
 So the model was biased toward underturning. The most efficient way to address this was to "bounce" the car off the outside edges of the turns - to steer toward the edge (while not recording), and the record the car sharply turning away from the edge. I did this at different points of the turn, in both directions of the track, and it didn't take too many extra training examples to keep the car on the track at all times.
 

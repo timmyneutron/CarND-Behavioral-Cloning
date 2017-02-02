@@ -24,7 +24,7 @@ Concepts explored in this project:
   - Since the information needed to steer the car is found in the lower portion of the forward-facing images, the top 50 pixels of the images were cropped.
   - Images were resized by a scale factor of .5, which maintained accuaracy while speeding up training
   - RGB channels were normalized to a range of -1 to 1
-
+  
 ### Data augmentation
   - Data was augmented by copying images of "turns" (ie, where the steering angle was not equal to 0), flipping these copies horizontally, and negating the steering angle.
   
@@ -60,6 +60,7 @@ There were many mis-starts to this project, as many ideas that seemed worth purs
 There were also plenty of false starts with image preprocessing - I tried techniques like cropping, scaling, applying a Gaussian blur, Laplacian gradient, or Canny transform, converting to YUV, and region masking. I even tried doing a 3-channel Canny transform, where I did individual Canny transforms on each color channel and then combined them back into one (very pretty) image. However, most of these ideas didn't result in better performance, and were scrapped.
 
 I eventually fell back on cropping off the top 50 pixels of each image (taking out unimportant noise above the road), and scaling images to a factor of 0.5 (which speed up training while maintaining accuracy). I also normalized the all the channel data to a range of -1 to 1.
+![Original and Processed Images](https://raw.githubusercontent.com/timmyneutron/self_driving_car_P3_steering_angle/master/processed_images.png)
 
 I also augmented the data by copying all of the "turn" images (images where the steering angle was not equal to 0), flipping the copies horizontally, and negating their steering angles. The rationale behind this was that any turn in one direction should correspond to a turn in the other direction that was equal in magnitude and opposite in direction.
 
@@ -69,7 +70,11 @@ I trained this base model on only 100 samples to see if it would overfit (since 
 
 I then tried to systematically increase the size of the model, and modify its hyperparameters, and test its performance on the track with each change (recording each of these intermediate models and their performance). I added another convolution layer and a fully connected layer, and found that using dropout on the fully connected layer was an effective way to mitigate "noisy" steering (steering back and forth over the center line). I was able to get the car pretty far without needing additional data, but eventually needed to supplement the provided data with my own.
 
-I noted that the failure mode for the car on the track was always underturning (ie, not turning enough) rather than overturning (turning too much). This made sense given the distribution of the training data - roughly half of the training labels are 0, and very few were high in magnitude. So the model was biased toward underturning. The most efficient way to address this was to "bounce" the car off the outside edges of the turns - to steer toward the edge (while not recording), and the record the car sharply turning away from the edge. I did this at different points of the turn, in both directions of the track, and it didn't take too many extra training examples to keep the car on the track at all times.
+I noted that the failure mode for the car on the track was always underturning (ie, not turning enough) rather than overturning (turning too much). This made sense given the distribution of the training data - roughly half of the training labels are 0, and very few were high in magnitude.
+
+![Steering Angle Histogram](https://raw.githubusercontent.com/timmyneutron/self_driving_car_P3_steering_angle/master/hist.png)
+
+So the model was biased toward underturning. The most efficient way to address this was to "bounce" the car off the outside edges of the turns - to steer toward the edge (while not recording), and the record the car sharply turning away from the edge. I did this at different points of the turn, in both directions of the track, and it didn't take too many extra training examples to keep the car on the track at all times.
 
 Once the car would stay on the track, I added some "correction" data - moving the car off the center line and then recording the car gently returning to the center line. This helped smooth out some of the noise in the steering, and correct for when the car was off center.
 

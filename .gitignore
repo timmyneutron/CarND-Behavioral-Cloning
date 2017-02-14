@@ -1,5 +1,7 @@
 IMG/
 
+__pycache__/
+
 *.sh
 
 *.app

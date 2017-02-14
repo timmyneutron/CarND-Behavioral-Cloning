@@ -2,6 +2,8 @@
 # Udacity Self-Driving Car Nanodegree
 # Project #3: Behavioral Cloning (Steering Angle)
 
+![Screenshot](https://raw.githubusercontent.com/timmyneutron/self_driving_car_P3_steering_angle/master/screenshot.jpeg)
+
 ## Introduction
 This is a project for Udacity's Self-Driving Car Nanodegree. It's a convolutional neural network that uses pictures from a forward-facing camera 
 to predict steering angle for video-game car on a track. It uses behavioral cloning to approximate human judgement.

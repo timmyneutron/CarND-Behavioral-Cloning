@@ -6,7 +6,7 @@
 
 ## Introduction
 This is a project for Udacity's Self-Driving Car Nanodegree. It's a convolutional neural network that uses pictures from a forward-facing camera 
-to predict steering angle for video-game car on a track. It uses behavioral cloning to approximate human judgement.
+to predict steering angle for a video-game car on a track. It uses behavioral cloning to approximate human judgement.
 
 ## Concepts and Classes
 Concepts explored in this project:

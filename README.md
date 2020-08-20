@@ -12,8 +12,7 @@ to predict steering angle for a video-game car on a track. It uses behavioral cl
 Concepts explored in this project:
 
   - Behavioral cloning
-  - Convolutional neural networks
-  - Neural networks, including deep neural networks and convolution neural networks
+  - Neural networks, including deep neural networks and convolutional neural networks
   - Data pre-processing, including normalization, color channels, and image manipulation using OpenCV and Matplotlib
   - Constructing and training neural networks using Keras
   - Logisitic classifiers, stochastic gradient descent, and back-propagation
